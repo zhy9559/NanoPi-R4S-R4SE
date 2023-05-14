@@ -14,6 +14,30 @@ git clone https://github.com/sbwml/luci-app-alist package/alist
 rm -rf feeds/packages/lang/golang
 svn export https://github.com/sbwml/packages_lang_golang/branches/19.x feeds/packages/lang/golang
 
+# Add iStore packages
+echo >> feeds.conf.default
+echo 'src-git nas https://github.com/linkease/nas-packages.git;master' >> feeds.conf.default
+echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >> feeds.conf.default
+./scripts/feeds update nas nas_luci
+./scripts/feeds install -a -p nas
+./scripts/feeds install -a -p nas_luci
+
+# Add iStore
+echo >> feeds.conf.default
+echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
+./scripts/feeds update istore
+./scripts/feeds install -d y -p istore luci-app-store
+
+# Add autosamba
+rm -rf package/lean/autosamba
+git clone https://github.com/sirpdboy/autosamba package/autosamba
+
+# Add lucky
+git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
+
+# Add netdata Chinese
+git clone https://github.com/sirpdboy/luci-app-netdata package/luci-app-netdata
+
 # Clone community packages
 mkdir package/community
 pushd package/community
