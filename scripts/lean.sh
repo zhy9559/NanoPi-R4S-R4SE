@@ -30,13 +30,13 @@ echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.defa
 
 # Add autosamba
 rm -rf package/lean/autosamba
-git clone https://github.com/sirpdboy/autosamba package/autosamba
+git clone --depth=1 https://github.com/sirpdboy/autosamba package/autosamba
 
 # Add lucky
-git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
+git clone --depth=1 https://github.com/sirpdboy/luci-app-lucky.git package/lucky
 
 # Add netdata Chinese
-git clone https://github.com/sirpdboy/luci-app-netdata package/luci-app-netdata
+git clone --depth=1 https://github.com/sirpdboy/luci-app-netdata package/luci-app-netdata
 
 # Clone community packages
 mkdir package/community
