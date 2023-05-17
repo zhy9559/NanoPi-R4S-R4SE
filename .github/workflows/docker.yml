@@ -16,6 +16,8 @@ on:
   # watch:
   #   types: started
 
+permissions: read-all|write-all
+
 env:
   REPO_URL: https://github.com/DHDAXCW/lede-rockchip
   REPO_BRANCH: stable
