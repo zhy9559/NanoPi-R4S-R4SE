@@ -100,6 +100,7 @@ git clone --depth=1 https://github.com/lisaac/luci-lib-docker
 # Add luci-theme
 git clone https://github.com/DHDAXCW/theme
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
+sed -i 's/luci-theme-bootstrap/KuCat/' feeds/luci/collections/luci/Makefile
 
 # Add subconverter
 git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
