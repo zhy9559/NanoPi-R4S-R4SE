@@ -38,6 +38,9 @@ git clone --depth=1 https://github.com/sirpdboy/luci-app-lucky.git package/lucky
 # Add netdata Chinese
 git clone --depth=1 https://github.com/sirpdboy/luci-app-netdata package/luci-app-netdata
 
+#Add ChatGPT
+git clone --depth=1 https://github.com/sirpdboy/chatgpt-web.git package/luci-app-chatgpt
+
 #Add KuCat
 git clone --depth=1 https://github.com/sirpdboy/luci-theme-kucat package/luci-theme-kucat
 
