@@ -15,10 +15,10 @@ rm -rf feeds/packages/lang/golang
 svn export https://github.com/sbwml/packages_lang_golang/branches/19.x feeds/packages/lang/golang
 
 # Add iStore
-#echo >> feeds.conf.default
-#echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
-#./scripts/feeds update istore
-#./scripts/feeds install -d y -p istore luci-app-store
+echo >> feeds.conf.default
+echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
+./scripts/feeds update istore
+./scripts/feeds install -d y -p istore luci-app-store
 
 # Add iStore packages
 #echo >> feeds.conf.default
@@ -37,6 +37,9 @@ git clone --depth=1 https://github.com/sirpdboy/luci-app-lucky.git package/lucky
 
 # Add netdata Chinese
 git clone --depth=1 https://github.com/sirpdboy/luci-app-netdata package/luci-app-netdata
+
+#Add KuCat
+git clone --depth=1 https://github.com/sirpdboy/luci-theme-kucat package/luci-theme-kucat
 
 # Clone community packages
 mkdir package/community
